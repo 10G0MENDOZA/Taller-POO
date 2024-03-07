@@ -6,74 +6,74 @@ package api.vehiculo.model;
 
 import api.vehiculo.domain.services.AccionesVehiculo;
 
-public class Motos extends Vehiculo implements AccionesVehiculo {
-    private int cilindraje;
+public class Motos extends Vehiculo {
+    private String cilindraje;
     private String frenoMoto;
-    private int acelerarMoto;
+    private String acelerarMoto;
     private String estacionamientoMoto;
-    private String dirrecionMoto;
+    private String direccionMoto;
 
-    public int getCilindraje() {
+    // Getters y setters
+
+    public String getCilindraje() {
         return cilindraje;
     }
 
-    public void setCilindraje(int cilindraje) {
+    public void setCilindraje(String cilindraje) {
         this.cilindraje = cilindraje;
     }
 
-    public String getFreno() {
+    public String getFrenoMoto() {
         return frenoMoto;
     }
 
-    public void setFreno(String freno) {
-        this.frenoMoto = freno;
+    public void setFrenoMoto(String frenoMoto) {
+        this.frenoMoto = frenoMoto;
     }
 
-    public int getAcelerar() {
+    public String getAcelerarMoto() {
         return acelerarMoto;
     }
 
-    public void setAcelerar(int acelerar) {
-        this.acelerarMoto = acelerar;
+    public void setAcelerarMoto(String acelerarMoto) {
+        this.acelerarMoto = acelerarMoto;
     }
 
-    public String getEstacionamiento() {
+    public String getEstacionamientoMoto() {
         return estacionamientoMoto;
     }
 
-    public void setEstacionamiento(String estacionamiento) {
-        this.estacionamientoMoto = estacionamiento;
+    public void setEstacionamientoMoto(String estacionamientoMoto) {
+        this.estacionamientoMoto = estacionamientoMoto;
     }
 
-    public String getDireccion() {
-        return dirrecionMoto;
+    public String getDireccionMoto() {
+        return direccionMoto;
     }
 
-    public void setDireccion(String direccion) {
-        this.dirrecionMoto = direccion;
+    public void setDireccionMoto(String direccionMoto) {
+        this.direccionMoto = direccionMoto;
     }
+
+    // Implementación de métodos de la interfaz AccionesVehiculo
 
     @Override
     public void acelerar() {
-        // Implementación de la acción de acelerar para motos
+        System.out.println("La moto está acelerando.");
     }
 
+    @Override
     public void frenar() {
-        // Implementación de la acción de frenar para motos
+        System.out.println("La moto está frenando.");
     }
 
     @Override
     public void estacionar() {
-        // Implementación de la acción de estacionar para motos
+        System.out.println("La moto está estacionada.");
     }
 
     @Override
     public void dirigir() {
-        // Implementación de la acción de dirigir para motos
-    }
-
-    @Override
-    public void frena() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("La moto está siendo dirigida.");
     }
 }

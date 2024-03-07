@@ -4,11 +4,13 @@
  */
 package api.vehiculo.model;
 
+import api.vehiculo.domain.services.AccionesVehiculo;
+
 /**
  *
  * @author 10GO
  */
-public class Vehiculo {
+public abstract class Vehiculo implements AccionesVehiculo{
     private String marca;
     private int modelo;
     private String placa;

@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package api.vehiculo.model;
-import api.vehiculo.domain.services.AccionesVehiculo;
 
-public class Carros extends Vehiculo implements AccionesVehiculo {
+public class Carros extends Vehiculo {
     private String tipoTraccion;
     private String tipoFreno;
-    private int aceleracion;
+    private String aceleracion;
     private String estacionamiento;
     private String direccion;
     private String tipoCombustible;
@@ -31,11 +30,11 @@ public class Carros extends Vehiculo implements AccionesVehiculo {
         this.tipoFreno = tipoFreno;
     }
 
-    public int getAceleracion() {
+    public String getAceleracion() {
         return aceleracion;
     }
 
-    public void setAceleracion(int aceleracion) {
+    public void setAceleracion(String aceleracion) {
         this.aceleracion = aceleracion;
     }
 
@@ -65,31 +64,27 @@ public class Carros extends Vehiculo implements AccionesVehiculo {
 
     // Implementación de métodos de la interfaz AccionesVehiculo
 
-    @Override
+ @Override
     public void acelerar() {
         // Implementación de la acción de acelerar para carros
+        System.out.println("El carro está acelerando.");
+    }
+
+    @Override
+    public void frenar() {
+        // Implementación de la acción de frenar para carros
+        System.out.println("El carro está frenando.");
     }
 
     @Override
     public void estacionar() {
         // Implementación de la acción de estacionar para carros
-    }
-
-    public void frenar() {
-        // Implementación de la acción de frenar para carros
-    }
-
-    public void cambiarDireccion() {
-        // Implementación de la acción de cambiar dirección para carros
-    }
-
-    @Override
-    public void frena() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        System.out.println("El carro está estacionado.");
     }
 
     @Override
     public void dirigir() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        // Implementación de la acción de dirigir para carros
+        System.out.println("El carro está siendo dirigido.");
     }
 }
